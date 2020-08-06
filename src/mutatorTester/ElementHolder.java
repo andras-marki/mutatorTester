@@ -46,11 +46,11 @@ public class ElementHolder {
 		return a <= b;
 	}
 
-	public boolean RORLarger(int a, int b) {
+	public boolean RORGreater(int a, int b) {
 		return a > b;
 	}
 
-	public boolean RORLargerEqual(int a, int b) {
+	public boolean RORGreaterEqual(int a, int b) {
 		return a >= b;
 	}
 
@@ -59,7 +59,7 @@ public class ElementHolder {
 	}
 
 	public boolean RORNotEqual(int a, int b) {
-		return a <= b;
+		return a != b;
 	}
 
 	// COR - conditional Operator Replacement
