@@ -161,4 +161,22 @@ public class ElementHolderTester {
 		ElementHolder em = new ElementHolder();
 		assertEquals(em.SORUnsignedRightShift(Integer.MIN_VALUE),1073741824);
 	}
+	
+	@Test
+	public void testLORBitwiseAND() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.LORBitwiseAND(5, 6), 4);
+	}
+	
+	@Test
+	public void testLORBitwiseOR() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.LORBitwiseOR(5, 6), 7);
+	}
+	
+	@Test
+	public void testLORBitwiseExclusiveOR() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.LORBitwiseExclusiveOR(5, 6), 3);
+	}
 }
