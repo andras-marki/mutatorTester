@@ -107,4 +107,28 @@ public class ElementHolderTester {
 		ElementHolder em = new ElementHolder();
 		assertEquals(em.RORNotEqual(1, 1), false);
 	}
+	
+	@Test
+	public void testCORAnd1() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.CORAnd(true, true), true);
+	}
+	
+	@Test
+	public void testCORAnd2() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.CORAnd(true, false), false);
+	}
+	
+	@Test
+	public void testCOROr1() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.COROr(true, false), true);
+	}
+	
+	@Test
+	public void testCOROr2() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.COROr(false, false), false);
+	}
 }
