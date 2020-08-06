@@ -131,4 +131,34 @@ public class ElementHolderTester {
 		ElementHolder em = new ElementHolder();
 		assertEquals(em.COROr(false, false), false);
 	}
+	
+	@Test
+	public void testSORSignedLeftShift() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.SORSignedLeftShift(10),20);
+	}
+	
+	@Test
+	public void testSORSignedRightShift1() {
+		ElementHolder em = new ElementHolder();		
+		assertEquals(em.SORSignedRightShift(10),5);
+	}
+	
+	@Test
+	public void testSORSignedRightShift2() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.SORSignedRightShift(Integer.MIN_VALUE),-1073741824);
+	}
+	
+	@Test
+	public void testSORUnsignedRightShift1() {
+		ElementHolder em = new ElementHolder();		
+		assertEquals(em.SORSignedRightShift(10),5);
+	}
+	
+	@Test
+	public void testSORUnsignedRightShift2() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.SORUnsignedRightShift(Integer.MIN_VALUE),1073741824);
+	}
 }

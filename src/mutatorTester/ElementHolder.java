@@ -84,21 +84,18 @@ public class ElementHolder {
 
 	// SOR - Shift Operator Replacement
 	// <<
-	public byte SORSignedLeftShift(byte b) {
-		b = (byte) (b << 0x0001);
-		return b;
+	public int SORSignedLeftShift(int b) {
+		return b << 0x0001;
 	}
 
 	// >>
-	public byte SORSignedRightShift(byte b) {
-		b = (byte) (b >> 0x0001);
-		return b;
+	public int SORSignedRightShift(int b) {
+		return b >> 0x0001;
 	}
 
 	// >>>
-	public byte SORUnsignedRightShift(byte b) {
-		b = (byte) (b >>> 0x0001);
-		return b;
+	public int SORUnsignedRightShift(int b) {
+		return (b >>> 0x0001);
 	}
 
 	// LOR - Logical Operator Replacement
