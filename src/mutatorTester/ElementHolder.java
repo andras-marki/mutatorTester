@@ -9,7 +9,7 @@ public class ElementHolder {
 		
 	}
 	
-	// AOR - Arrithmetic Operator Replacement
+	// AOR - Arithmetic Operator Replacement
 	public int AORAddition(int a, int b) {
 		return a + b;
 	}
