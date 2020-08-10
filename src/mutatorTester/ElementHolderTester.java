@@ -48,6 +48,13 @@ public class ElementHolderTester {
 		assertEquals(em.RORLess(1, 1), false);
 	}
 	
+	// needed to detect the != mutant
+	@Test
+	public void testRORLess3() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.RORLess(1, 0), false);
+	}
+	
 	@Test
 	public void testRORLessEqual1() {
 		ElementHolder em = new ElementHolder();
@@ -58,6 +65,13 @@ public class ElementHolderTester {
 	public void testRORLessEqual2() {
 		ElementHolder em = new ElementHolder();
 		assertEquals(em.RORLessEqual(1, 1), true);
+	}
+	
+	// needed to detect the TRUE mutant
+	@Test
+	public void testRORLessEqual3() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.RORLessEqual(1, 0), false);
 	}
 	
 	@Test
@@ -72,6 +86,13 @@ public class ElementHolderTester {
 		assertEquals(em.RORGreater(1, 1), false);
 	}
 	
+	// needed to detect the != mutant
+	@Test
+	public void testRORGreater3() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.RORGreater(0, 1), false);
+	}
+	
 	@Test
 	public void testRORGreaterEqual1() {
 		ElementHolder em = new ElementHolder();
@@ -81,7 +102,14 @@ public class ElementHolderTester {
 	@Test
 	public void testRORGreaterEqual2() {
 		ElementHolder em = new ElementHolder();
-		assertEquals(em.RORGreaterEqual(1, 0), true);
+		assertEquals(em.RORGreaterEqual(0, 0), true);
+	}
+	
+	// needed to detect the TRUE mutant
+	@Test
+	public void testRORGreaterEqual3() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.RORGreaterEqual(0, 1), false);
 	}
 	
 	@Test
@@ -96,6 +124,13 @@ public class ElementHolderTester {
 		assertEquals(em.ROREqual(1, 0), false);
 	}
 	
+	// needed to detect the <= mutant
+	@Test
+	public void testROREqual3() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.ROREqual(0, 1), false);
+	}
+	
 	@Test
 	public void testRORNotEqual1() {
 		ElementHolder em = new ElementHolder();
@@ -106,6 +141,13 @@ public class ElementHolderTester {
 	public void testRORNotEqual2() {
 		ElementHolder em = new ElementHolder();
 		assertEquals(em.RORNotEqual(1, 1), false);
+	}
+	
+	// needed to detect the > mutant
+	@Test
+	public void testRORNotEqual3() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.RORNotEqual(0, 1), true);
 	}
 	
 	@Test
@@ -120,6 +162,20 @@ public class ElementHolderTester {
 		assertEquals(em.CORAnd(true, false), false);
 	}
 	
+	// needed to detect the == mutant	
+	@Test
+	public void testCORAnd3() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.CORAnd(false, false), false);
+	}
+	
+	// needed to detect the RHS mutant	
+	@Test
+	public void testCORAnd4() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.CORAnd(false, true), false);
+	}
+	
 	@Test
 	public void testCOROr1() {
 		ElementHolder em = new ElementHolder();
@@ -130,6 +186,20 @@ public class ElementHolderTester {
 	public void testCOROr2() {
 		ElementHolder em = new ElementHolder();
 		assertEquals(em.COROr(false, false), false);
+	}
+	
+	// needed to detect the != mutant
+	@Test
+	public void testCOROr3() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.COROr(true, true), true);
+	}
+	
+	// needed to detect the LHS mutant
+	@Test
+	public void testCOROr4() {
+		ElementHolder em = new ElementHolder();
+		assertEquals(em.COROr(false, true), true);
 	}
 	
 	@Test
