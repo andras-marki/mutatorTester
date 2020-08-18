@@ -2,16 +2,11 @@ package mutatorTester;
 
 public class Main {
 	public static void main(String[] args) {
-		ElementHolder em = new ElementHolder();
+		ElementHolderLooper eml = new ElementHolderLooper();
 		int a = 5;
 		int b = 6;
-		System.out.println(a & b);
-		System.out.println(em.LORBitwiseAND(a, b));
-		System.out.println(a | b);
-		System.out.println(em.LORBitwiseOR(a, b));
-		System.out.println(a ^ b);
-		System.out.println(em.LORBitwiseExclusiveOR(a, b));
+		int loop = 2;
 		
-		// System.out.println(em.LORBitwiseExclusiveOR(100,20));
+		System.out.println(eml.doWhileInlineRORLess(a, b, loop));
 	}
 }
